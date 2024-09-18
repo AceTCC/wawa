@@ -6,10 +6,40 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
+    transition: background-color 0.5s ease; /* Smooth background color transition */
 }
 
 #game {
     text-align: center;
+}
+
+#indicator {
+    font-size: 100px; /* Larger size for the indicator */
+    margin: 20px;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform and opacity */
+    opacity: 1;
+}
+
+#progress-bar-container {
+    width: 80%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #3498db; /* Color of the progress bar */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s linear; /* Smooth transition for draining effect */
 }
 
 #buttons {
@@ -41,4 +71,76 @@ button {
 #instructions {
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Existing CSS */
+
+#restartButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db; /* Blue color for the restart button */
+    color: white;
+    display: none; /* Hidden by default */
+}
+
+#restartButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+/* Existing CSS */
+
+#highScore {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Existing CSS */
+
+#mainMenuButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c; /* Red color for the main menu button */
+    color: white;
+    display: none; /* Hidden by default */
+}
+
+#mainMenuButton:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+/* Existing CSS */
+
+/* Style for the small button */
+#mainMenuSmallButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db; /* Blue color for the small menu button */
+    color: white;
+}
+
+#mainMenuSmallButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
