@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="instructions">Tap the indicated direction!</div>
+        <div id="indicator"></div>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="buttons">
+            <button id="leftButton" aria-label="Tap Left">A (Left)</button>
+            <button id="rightButton" aria-label="Tap Right">D (Right)</button>
+        </div>
+        <div id="score">Score: 0</div>
+        <div id="highScore">High Score: 0</div>
+        <button id="restartButton" style="display: none;">Restart</button>
+        <button id="mainMenuButton" style="display: none;">Back to Main Menu</button>
+        <button id="mainMenuSmallButton">Menu</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
