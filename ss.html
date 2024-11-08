@@ -1,0 +1,30 @@
+<title>Supersearcher Local</title>
+<base target="_parent">
+<script>
+  document.getElementById("page").requestFullscreen();
+  function fllscrn()
+  {
+	document.getElementById("page").requestFullscreen();
+  }
+  function search()
+  {
+    document.getElementById('frame').src = document.getElementById("searchfield").value;
+  }
+  function newWin()
+  {
+    const w = window.open()
+	w.document.body.innerHTML = '<iframe allowfullscreen src="wow.html" width="100%" height="100%" style="border:none;" id="frame">'
+  }
+</script>
+<div id="page">
+<center>
+<iframe allowfullscreen src="wow.html" width="95%" height="95%" style="border:none; padding: 1px; border-radius: 8px;" id="frame">
+</iframe>
+  <br>
+<button onclick="document.getElementById('frame').src = 'wow.html'" style="border-radius: 4px; width:11%">Home</button>
+<button onclick="newWin()" style="border-radius: 4px; width:11%">about:blank</button>
+<input type="text" id="searchfield" style="border-radius: 4px; width:45%" value="https://">
+<button onclick="search()" style="border-radius: 4px; width:5%">Go</button>
+<button onclick="fllscrn()" style="border-radius: 4px; width:23%">Fullscreen Webpage</button>
+</center>
+</div>
